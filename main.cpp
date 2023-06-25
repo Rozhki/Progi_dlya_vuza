@@ -15,7 +15,7 @@ class Node
         }
 };
 
-class DoublyLinkedList // Определение DoublyLinkedList для списка
+class DoublyLinkedList // РћРїСЂРµРґРµР»РµРЅРёРµ DoublyLinkedList РґР»СЏ СЃРїРёСЃРєР° 
 {
     private:
         Node* head;
@@ -28,7 +28,7 @@ class DoublyLinkedList // Определение DoublyLinkedList для списка
             tail = NULL;
         }
 
-    void addNode(int data) // Добавление нового узла в конец списка
+    void addNode(int data) // Р”РѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕРіРѕ СѓР·Р»Р° РІ РєРѕРЅРµС† СЃРїРёСЃРєР°
     {
         Node* newNode = new Node(data);
         if (head == NULL) 
@@ -68,7 +68,7 @@ int dividingNumbers(int num_1, int num_2)
     }
     else 
     {
-        cout << "На ноль делить нельзя :)";
+        cout << "РќР° РЅРѕР»СЊ РґРµР»РёС‚СЊ РЅРµР»СЊР·СЏ :)";
         return 0;
     }
 }
@@ -88,21 +88,21 @@ int main()
     setlocale(LC_ALL, "RU-ru");
 
     DoublyLinkedList list;
-    for (int i = 0; i <= 4; ++i) // Добавление узлов в список
+    for (int i = 0; i <= 4; ++i) // Р”РѕР±Р°РІР»РµРЅРёРµ СѓР·Р»РѕРІ РІ СЃРїРёСЃРѕРє
     {
         list.addNode(i);
     }
 
     int num_1;
     int num_2;
-    cout << "Введите два числа через пробел: ";
+    cout << "Р’РІРµРґРёС‚Рµ РґРІР° С‡РёСЃР»Р° С‡РµСЂРµР· РїСЂРѕР±РµР»: ";
     cin >> num_1 >> num_2;
-    cout << "0 - Сложение" << endl;
-    cout << "1 - Вычитание" << endl;
-    cout << "2 - Умножение" << endl;
-    cout << "3 - Деление" << endl;
-    cout << "4 - Возведение в степень" << endl;
-    cout << "Введите номер функции: ";
+    cout << "0 - РЎР»РѕР¶РµРЅРёРµ" << endl;
+    cout << "1 - Р’С‹С‡РёС‚Р°РЅРёРµ" << endl;
+    cout << "2 - РЈРјРЅРѕР¶РµРЅРёРµ" << endl;
+    cout << "3 - Р”РµР»РµРЅРёРµ" << endl;
+    cout << "4 - Р’РѕР·РІРµРґРµРЅРёРµ РІ СЃС‚РµРїРµРЅСЊ" << endl;
+    cout << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ С„СѓРЅРєС†РёРё: ";
     int choiceNumber;
     cin >> choiceNumber;
     int otvet = 0;
@@ -124,9 +124,9 @@ int main()
             otvet = exponentiationNumbers(num_1, num_2);
             break;
         default:
-            cout << "Функция не найдена";
+            cout << "Р¤СѓРЅРєС†РёСЏ РЅРµ РЅР°Р№РґРµРЅР°";
             return 0;
     }
-    cout << "Ваш ответ: " << otvet;
+    cout << "Р’Р°С€ РѕС‚РІРµС‚: " << otvet;
     return 0;
 }
