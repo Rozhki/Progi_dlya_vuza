@@ -8,7 +8,7 @@ struct Node
     Node* right;
 };
 
-Node* createNode(int data) // Ф-ция для создания узла
+Node* createNode(int data) // Р¤-С†РёСЏ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ СѓР·Р»Р°
 {
     Node* newNode = new Node;
     newNode->data = data;
@@ -17,7 +17,7 @@ Node* createNode(int data) // Ф-ция для создания узла
     return newNode;
 }
 
-Node* insertNode(Node*& root, int data) // Ф-ция для вставки узла
+Node* insertNode(Node*& root, int data) // Р¤-С†РёСЏ РґР»СЏ РІСЃС‚Р°РІРєРё СѓР·Р»Р°
 {
     if (root == NULL) 
     {
@@ -34,7 +34,7 @@ Node* insertNode(Node*& root, int data) // Ф-ция для вставки узла
     }
 }
 
-Node* search(Node* root, int data) // Ф-ция для поиска узла
+Node* search(Node* root, int data) // Р¤-С†РёСЏ РґР»СЏ РїРѕРёСЃРєР° СѓР·Р»Р°
 {
     if (root == NULL || root->data == data) 
     {
@@ -49,7 +49,7 @@ Node* search(Node* root, int data) // Ф-ция для поиска узла
     }
 }
 
-Node* deleteTree(Node* root) // Ф-ция для удаления дерева
+Node* deleteTree(Node* root) // Р¤-С†РёСЏ РґР»СЏ СѓРґР°Р»РµРЅРёСЏ РґРµСЂРµРІР°
 {
     if (root == NULL) 
     {
@@ -61,22 +61,22 @@ Node* deleteTree(Node* root) // Ф-ция для удаления дерева
     return 0;
 }
 
-int addingNumbers(int num_1, int num_2) // Сложение
+int addingNumbers(int num_1, int num_2)
 {
     return num_1 + num_2;
 }
 
-int subtractingNumbers(int num_1, int num_2) // Вычитание
+int subtractingNumbers(int num_1, int num_2)
 {
     return num_1 - num_2;
 }
 
-int multiplicationNumbers(int num_1, int num_2) // Умножение
+int multiplicationNumbers(int num_1, int num_2)
 {
     return num_1 * num_2;
 }
 
-int dividingNumbers(int num_1, int num_2) // Деление
+int dividingNumbers(int num_1, int num_2)
 {
     if (num_2 != 0)
     {
@@ -84,12 +84,12 @@ int dividingNumbers(int num_1, int num_2) // Деление
     }
     else
     {
-        cout << "На ноль делить нельзя :)";
+        cout << "РќР° РЅРѕР»СЊ РґРµР»РёС‚СЊ РЅРµР»СЊР·СЏ :)";
         return 0;
     }
 }
 
-int exponentiationNumbers(int num_1, int num_2) // Возведение в степень
+int exponentiationNumbers(int num_1, int num_2)
 {
     int a = 1;
     for (int i = 0; i < num_2; i++)
@@ -103,7 +103,7 @@ int main()
 {
     setlocale(LC_ALL, "RU-ru");
     
-    Node* root = nullptr; // Создание дерева
+    Node* root = nullptr; // РЎРѕР·РґР°РЅРёРµ РґРµСЂРµРІР°
     for (int i = 0; i <= 4; ++i) 
     {
         insertNode(root, i);
@@ -111,14 +111,14 @@ int main()
 
     int num_1;
     int num_2;
-    cout << "Введите два числа через пробел: ";
+    cout << "Р’РІРµРґРёС‚Рµ РґРІР° С‡РёСЃР»Р° С‡РµСЂРµР· РїСЂРѕР±РµР»: ";
     cin >> num_1 >> num_2;
-    cout << "0 - Сложение" << endl;
-    cout << "1 - Вычитание" << endl;
-    cout << "2 - Умножение" << endl;
-    cout << "3 - Деление" << endl;
-    cout << "4 - Возведение в степень" << endl;
-    cout << "Введите номер функции: ";
+    cout << "0 - РЎР»РѕР¶РµРЅРёРµ" << endl;
+    cout << "1 - Р’С‹С‡РёС‚Р°РЅРёРµ" << endl;
+    cout << "2 - РЈРјРЅРѕР¶РµРЅРёРµ" << endl;
+    cout << "3 - Р”РµР»РµРЅРёРµ" << endl;
+    cout << "4 - Р’РѕР·РІРµРґРµРЅРёРµ РІ СЃС‚РµРїРµРЅСЊ" << endl;
+    cout << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ С„СѓРЅРєС†РёРё: ";
     int choiceNumber;
     cin >> choiceNumber;
 
@@ -143,12 +143,12 @@ int main()
             otvet = exponentiationNumbers(num_1, num_2);
             break;
         }
-        cout << "Ваш ответ: " << otvet;
+        cout << "Р’Р°С€ РѕС‚РІРµС‚: " << otvet;
     }
     else
     {
-        cout << "Функция не найдена";
+        cout << "Р¤СѓРЅРєС†РёСЏ РЅРµ РЅР°Р№РґРµРЅР°";
     }
-    deleteTree(root); // Освобожденпе памяти
+    deleteTree(root); // РћСЃРІРѕР±РѕР¶РґРµРЅРїРµ РїР°РјСЏС‚Рё
     return 0;
 }
